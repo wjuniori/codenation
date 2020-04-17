@@ -1,6 +1,82 @@
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.list-inline {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: #fff;
+  font-size: 12px;
+
+  /* Hero Image */
+  /* Use "linear-gradient" to add a darken background effect to the image (capa-madmax2.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/capa-madmax2.jpg");
+
+  /* Set a specific height */
+  height: 90%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+
+  /* Position and center the image to scale nicely on all sceeens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-image a:hover,
+.yellow {
+  color: #e4bb2a;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: bold;
+}
+
+.navbar-menu li:not(:last-child) {
+  padding-right: 20%;
+}
+
+.hero-text {
+  margin-bottom: 4%;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+}
+
+.hero-list li:not(:last-child) {
+  margin-right: 2%;
 }
