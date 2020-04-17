@@ -22,17 +22,27 @@ html {
   margin: 0;
 }
 
-.hero-image {
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.content-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  padding-top: 2%;
 
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
+}
 
+.hero-image {
   /* Hero Image */
   /* Use "linear-gradient" to add a darken background effect to the image (capa-madmax2.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../img/capa-madmax2.jpg");
 
   /* Set a specific height */
@@ -42,7 +52,7 @@ html {
   background-attachment: fixed;
 
   /* Position and center the image to scale nicely on all sceeens */
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -69,14 +79,63 @@ html {
   padding-right: 20%;
 }
 
+.navbar-profile {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-profile-foto {
+  margin-right: 15px;
+  width: 45px;
+}
+
+.navbar-profile-foto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 100%;
+}
+
 .hero-text {
   margin-bottom: 4%;
 }
 
 .hero-text h1 {
-  font-size: 60px;
+  font-size: 65px;
+  margin: 0;
+}
+
+.hero-list {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .hero-list li:not(:last-child) {
   margin-right: 2%;
+}
+
+.hero-text .btn-primary {
+  font-size: 15px;
+  color: #000;
+  background-color: #e4bb2a;
+
+  border: 1px solid #e4bb2a;
+  border-radius: 30px;
+
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-text .btn-primary:hover {
+  color: #000;
+  background-color: #bc9a21;
+  border: 1px solid #bc9a21;
+}
+
+.hero-text .btn-primary i {
+  font-size: 22px;
+  padding-left: 10px;
 }
