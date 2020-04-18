@@ -106,7 +106,7 @@ html {
 }
 
 .hero-text {
-  margin-bottom: 4%;
+  margin-bottom: 30px;
 }
 
 .hero-text h1 {
@@ -196,6 +196,7 @@ html {
 
 main {
   background-color: #f2f2f2;
+  padding-bottom: 30px;
 }
 
 /* ********** CARDS SECTION ********** */
@@ -296,8 +297,54 @@ main {
 
 .card-footer a {
   color: #ccc;
+  text-decoration: none;
 }
 
 .card-footer a:hover {
   color: #e74c3c;
+}
+
+/* ********** FOOTER ********** */
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.content-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.list-social li:not(:last-child) {
+  margin-right: 25px;
+}
+
+.list-social a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.list-social .link-twitter i:hover {
+  color: #55acee;
+}
+
+.list-social .link-facebook i:hover {
+  color: #3b5998;
+}
+
+.list-social .link-instagram i:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
