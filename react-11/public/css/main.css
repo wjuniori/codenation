@@ -1,6 +1,8 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
+/* ********** GENERAL STYLES ********** */
+
 * {
   box-sizing: border-box;
 }
@@ -11,8 +13,11 @@ html {
   height: 100%;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
 }
 
 .list-inline {
@@ -22,25 +27,17 @@ html {
   margin: 0;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  height: 100%;
+.uppercase {
+  text-transform: uppercase;
 }
 
-.content-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding-top: 2%;
-
-  color: #fff;
-  font-size: 13px;
+.yellow {
+  color: #e4bb2a;
 }
+
+/* ********** HEADER ********** */
 
 .hero-image {
-  /* Hero Image */
   /* Use "linear-gradient" to add a darken background effect to the image (capa-madmax2.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../img/capa-madmax2.jpg");
@@ -62,9 +59,19 @@ html {
   text-decoration: none;
 }
 
-.hero-image a:hover,
-.yellow {
+.hero-image a:hover {
   color: #e4bb2a;
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 2%;
+
+  color: #fff;
+  font-size: 13px;
 }
 
 .navbar {
@@ -76,11 +83,12 @@ html {
 }
 
 .navbar-menu li:not(:last-child) {
-  padding-right: 20%;
+  margin-right: 50px;
 }
 
 .navbar-profile {
   display: flex;
+  justify-content: end;
   align-items: center;
 }
 
@@ -137,5 +145,49 @@ html {
 
 .hero-text .btn-primary i {
   font-size: 22px;
-  padding-left: 10px;
+  margin-left: 10px;
 }
+
+/* ********** NAVIGATION BAR ********** */
+
+.navbar-movies {
+  height: 10%;
+  font-size: 13px;
+}
+
+.content-navbar-movies {
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.list-movies {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-movies a {
+  display: inline-block;
+  height: 100%;
+  color: #e4bb2a;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+}
+
+.list-movies a:not(:last-child) {
+  margin-right: 40px;
+}
+
+.list-movies a:hover {
+  border-bottom: 1px solid #e4bb2a;
+}
+
+.list-movies li {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ********** MAIN ********** */
