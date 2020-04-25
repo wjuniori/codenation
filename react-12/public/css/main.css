@@ -1,15 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+/* ********** GENERAL STYLES ********** */
 
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fafafa;
+}
 
+.container {
+  width: 100%;
+  max-width: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+/* ********** TOPNAV ********** */
 
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  background-color: #fff;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e1e1e1;
+}
 
+.topnav__logo {
+  width: 40%;
+}
 
-
+.topnav__link {
+  color: #000;
+  text-decoration: none;
+}
