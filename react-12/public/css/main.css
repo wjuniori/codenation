@@ -40,3 +40,42 @@ body {
   color: #000;
   text-decoration: none;
 }
+
+/* ********** STORIES ********** */
+
+.stories {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 20px 16px;
+}
+
+.stories__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.stories__link:not(:last-child) {
+  margin-right: 15px;
+}
+
+.stories__link--notviewed {
+  background: linear-gradient(
+    45deg,
+    rgba(245, 160, 77, 1) 0%,
+    rgba(160, 15, 139, 1) 100%
+  );
+}
+
+.stories__profile {
+  border-radius: 100%;
+  width: 100%;
+  max-width: 70px;
+  padding: 2px;
+  background-color: #fff;
+}
