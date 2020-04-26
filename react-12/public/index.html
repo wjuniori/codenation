@@ -12,22 +12,24 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!-- ********** HEADER ********** -->
+    <!-- ********** TOPNAV ********** -->
 
-    <header>
+    <nav>
       <div class="container">
         <div class="topnav">
           <div class="topnav__logo">
-            <img src="./img/instagram-logo.svg" alt="Logo do Instagram" />
+            <a href="#">
+              <img src="./img/instagram-logo.svg" alt="Logo do Instagram" />
+            </a>
           </div>
           <div>
-            <a class="topnav__link" href="#">
+            <a href="#" class="topnav__link">
               <i class="far fa-paper-plane"></i>
             </a>
           </div>
         </div>
       </div>
-    </header>
+    </nav>
 
     <!-- ********** MAIN ********** -->
 
@@ -41,24 +43,352 @@
               <img
                 class="stories__profile"
                 src="./img/profiles/yoda/yoda-profile.jpg"
-                alt="Imagem do profile de Yoda"
+                alt="Imagem do profile de Mestre Yoda"
               />
             </a>
             <a href="#" class="stories__link stories__link--notviewed">
               <img
                 class="stories__profile"
                 src="./img/profiles/gamora/gamora-profile.jpg"
-                alt="Imagem do profile de Gamora"
+                alt="Imagem do profile de Gamora Zen"
               />
             </a>
             <a href="#" class="stories__link">
               <img
                 class="stories__profile"
                 src="./img/profiles/black-panther/black-panther-profile.jpg"
-                alt="Imagem do profile de Black Panther"
+                alt="Imagem do profile de T'Challa"
               />
             </a>
           </div>
+        </div>
+      </section>
+
+      <!-- ********** POST ********** -->
+
+      <section>
+        <div class="container">
+          <article class="post">
+            <div class="post__header">
+              <div>
+                <a href="#" class="post__link">
+                  <img
+                    class="post__profile"
+                    src="./img/profiles/yoda/yoda-profile.jpg"
+                    alt="Imagem do profile de Mestre Yoda"
+                  />
+                </a>
+                <a href="#" class="post__link post__link--bold">Mestre Yoda</a>
+              </div>
+              <a href="#" class="post__link">
+                <i class="fas fa-ellipsis-h"></i>
+              </a>
+            </div>
+            <div class="post__body">
+              <img
+                class="post__image"
+                src="./img/profiles/yoda/yoda-1.jpg"
+                alt="Post de Mestre Yoda"
+              />
+              <div class="post__icons">
+                <div>
+                  <a href="#" class="post__link post__link--mr">
+                    <i class="far fa-heart"></i>
+                  </a>
+                  <a href="#" class="post__link">
+                    <i class="far fa-comment"></i>
+                  </a>
+                </div>
+                <a href="#" class="post__link">
+                  <i class="far fa-bookmark"></i>
+                </a>
+              </div>
+            </div>
+            <div class="post__footer">
+              <a href="#" class="post__link">
+                <img
+                  class="post__profile post__profile--smaller"
+                  src="./img/profiles/domino/domino-profile.jpg"
+                  alt="Imagem do profile de Domino"
+                />
+              </a>
+              <span>
+                curtido por
+                <a href="#" class="post__link post__link--bold">Dominio</a> e
+                outras
+                <a href="#" class="post__link post__link--bold">7 pessoas</a>
+              </span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="post__header">
+              <div>
+                <a href="#" class="post__link">
+                  <img
+                    class="post__profile"
+                    src="./img/profiles/gamora/gamora-profile.jpg"
+                    alt="Imagem do profile de Gamora Zen"
+                  />
+                </a>
+                <a href="#" class="post__link post__link--bold">Gamora Zen</a>
+              </div>
+              <a href="#" class="post__link">
+                <i class="fas fa-ellipsis-h"></i>
+              </a>
+            </div>
+            <div class="post__body">
+              <img
+                class="post__image"
+                src="./img/profiles/gamora/gamora-1.jpg"
+                alt="Post de Gamora Zen"
+              />
+              <div class="post__icons">
+                <div>
+                  <a href="#" class="post__link post__link--mr">
+                    <i class="far fa-heart"></i>
+                  </a>
+                  <a href="#" class="post__link">
+                    <i class="far fa-comment"></i>
+                  </a>
+                </div>
+                <a href="#" class="post__link">
+                  <i class="far fa-bookmark"></i>
+                </a>
+              </div>
+            </div>
+            <div class="post__footer">
+              <a href="#" class="post__link">
+                <img
+                  class="post__profile post__profile--smaller"
+                  src="./img/profiles/carol/carol-profile.jpg"
+                  alt="Imagem do profile de Carol Danvers"
+                />
+              </a>
+              <span>
+                curtido por
+                <a href="#" class="post__link post__link--bold"
+                  >Carol Danvers</a
+                >
+                e outras
+                <a href="#" class="post__link post__link--bold">7 pessoas</a>
+              </span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="post__header">
+              <div>
+                <a href="#" class="post__link">
+                  <img
+                    class="post__profile"
+                    src="./img/profiles/black-panther/black-panther-profile.jpg"
+                    alt="Imagem do profile de T'Challa"
+                  />
+                </a>
+                <a href="#" class="post__link post__link--bold">T'Challa</a>
+              </div>
+              <a href="#" class="post__link">
+                <i class="fas fa-ellipsis-h"></i>
+              </a>
+            </div>
+            <div class="post__body">
+              <img
+                class="post__image"
+                src="./img/profiles/black-panther/black-panther-1.jpg"
+                alt="Post de T'Challa"
+              />
+              <div class="post__icons">
+                <div>
+                  <a href="#" class="post__link post__link--mr">
+                    <i class="far fa-heart"></i>
+                  </a>
+                  <a href="#" class="post__link">
+                    <i class="far fa-comment"></i>
+                  </a>
+                </div>
+                <a href="#" class="post__link">
+                  <i class="far fa-bookmark"></i>
+                </a>
+              </div>
+            </div>
+            <div class="post__footer">
+              <a href="#" class="post__link">
+                <img
+                  class="post__profile post__profile--smaller"
+                  src="./img/profiles/bruce/bruce-profile.jpg"
+                  alt="Imagem do profile de Bruce Wayne"
+                />
+              </a>
+              <span>
+                curtido por
+                <a href="#" class="post__link post__link--bold">Bruce Wayne</a>
+                e outras
+                <a href="#" class="post__link post__link--bold">5 pessoas</a>
+              </span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="post__header">
+              <div>
+                <a href="#" class="post__link">
+                  <img
+                    class="post__profile"
+                    src="./img/profiles/carol/carol-profile.jpg"
+                    alt="Imagem do profile de Carol Danvers"
+                  />
+                </a>
+                <a href="#" class="post__link post__link--bold"
+                  >Carol Danvers</a
+                >
+              </div>
+              <a href="#" class="post__link">
+                <i class="fas fa-ellipsis-h"></i>
+              </a>
+            </div>
+            <div class="post__body">
+              <img
+                class="post__image"
+                src="./img/profiles/carol/carol-1.jpg"
+                alt="Post de Carol Danvers"
+              />
+              <div class="post__icons">
+                <div>
+                  <a href="#" class="post__link post__link--mr">
+                    <i class="far fa-heart"></i>
+                  </a>
+                  <a href="#" class="post__link">
+                    <i class="far fa-comment"></i>
+                  </a>
+                </div>
+                <a href="#" class="post__link">
+                  <i class="far fa-bookmark"></i>
+                </a>
+              </div>
+            </div>
+            <div class="post__footer">
+              <a href="#" class="post__link">
+                <img
+                  class="post__profile post__profile--smaller"
+                  src="./img/profiles/yoda/yoda-profile.jpg"
+                  alt="Imagem do profile de Mestre Yoda"
+                />
+              </a>
+              <span>
+                curtido por
+                <a href="#" class="post__link post__link--bold">Mestre Yoda</a>
+                e outras
+                <a href="#" class="post__link post__link--bold">7 pessoas</a>
+              </span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="post__header">
+              <div>
+                <a href="#" class="post__link">
+                  <img
+                    class="post__profile"
+                    src="./img/profiles/domino/domino-profile.jpg"
+                    alt="Imagem do profile de Domino"
+                  />
+                </a>
+                <a href="#" class="post__link post__link--bold">Domino</a>
+              </div>
+              <a href="#" class="post__link">
+                <i class="fas fa-ellipsis-h"></i>
+              </a>
+            </div>
+            <div class="post__body">
+              <img
+                class="post__image"
+                src="./img/profiles/domino/domino-1.jpg"
+                alt="Post de Domino"
+              />
+              <div class="post__icons">
+                <div>
+                  <a href="#" class="post__link post__link--mr">
+                    <i class="far fa-heart"></i>
+                  </a>
+                  <a href="#" class="post__link">
+                    <i class="far fa-comment"></i>
+                  </a>
+                </div>
+                <a href="#" class="post__link">
+                  <i class="far fa-bookmark"></i>
+                </a>
+              </div>
+            </div>
+            <div class="post__footer">
+              <a href="#" class="post__link">
+                <img
+                  class="post__profile post__profile--smaller"
+                  src="./img/profiles/black-panther/black-panther-profile.jpg"
+                  alt="Imagem do profile de T'Challa"
+                />
+              </a>
+              <span>
+                curtido por
+                <a href="#" class="post__link post__link--bold">T'Challa</a> e
+                outras
+                <a href="#" class="post__link post__link--bold">3 pessoas</a>
+              </span>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="post__header">
+              <div>
+                <a href="#" class="post__link">
+                  <img
+                    class="post__profile"
+                    src="./img/profiles/bruce/bruce-profile.jpg"
+                    alt="Imagem do profile de Bruce Wayne"
+                  />
+                </a>
+                <a href="#" class="post__link post__link--bold">Bruce Wayne</a>
+              </div>
+              <a href="#" class="post__link">
+                <i class="fas fa-ellipsis-h"></i>
+              </a>
+            </div>
+            <div class="post__body">
+              <img
+                class="post__image"
+                src="./img/profiles/bruce/bruce-1.jpg"
+                alt="Post de Bruce Wayne"
+              />
+              <div class="post__icons">
+                <div>
+                  <a href="#" class="post__link post__link--mr">
+                    <i class="far fa-heart"></i>
+                  </a>
+                  <a href="#" class="post__link">
+                    <i class="far fa-comment"></i>
+                  </a>
+                </div>
+                <a href="#" class="post__link">
+                  <i class="far fa-bookmark"></i>
+                </a>
+              </div>
+            </div>
+            <div class="post__footer">
+              <a href="#" class="post__link">
+                <img
+                  class="post__profile post__profile--smaller"
+                  src="./img/profiles/gamora/gamora-profile.jpg"
+                  alt="Imagem do profile de Gamora Zen"
+                />
+              </a>
+              <span>
+                curtido por
+                <a href="#" class="post__link post__link--bold">Gamora Zen</a> e
+                outras
+                <a href="#" class="post__link post__link--bold">2 pessoas</a>
+              </span>
+            </div>
+          </article>
         </div>
       </section>
     </main>
