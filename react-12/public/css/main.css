@@ -9,11 +9,13 @@
 }
 
 body {
+  padding-top: 61px;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   background-color: #fafafa;
 }
 
+/* Extra small <576px */
 .container {
   width: 100%;
   max-width: none;
@@ -21,7 +23,44 @@ body {
   margin-left: auto;
 }
 
+/* Small ≥576px */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium ≥768px */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large ≥992px */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large ≥1200px */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 /* ********** TOPNAV ********** */
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+}
 
 .topnav {
   display: flex;
@@ -30,16 +69,21 @@ body {
 
   background-color: #fff;
   padding: 8px 16px;
-  border-bottom: 1px solid #e1e1e1;
 }
 
 .topnav__logo {
-  width: 40%;
+  display: inline-block;
+  height: 40px;
+}
+
+.topnav__image {
+  height: 100%;
 }
 
 .topnav__link {
   color: #000;
   text-decoration: none;
+  font-size: 15px;
 }
 
 /* ********** STORIES ********** */
