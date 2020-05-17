@@ -2,5 +2,9 @@ import React from "react";
 import "./Container.scss";
 
 export default function Container(props) {
-  return <div className="container">{props.children}</div>;
+  return (
+    <div data-testid={props.id} className="container">
+      {props.children}
+    </div>
+  );
 }

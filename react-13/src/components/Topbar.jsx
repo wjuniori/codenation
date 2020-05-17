@@ -6,8 +6,8 @@ import "./Topbar.scss";
 class Topbar extends React.Component {
   render() {
     return (
-      <header className="topbar">
-        <Container>
+      <header data-testid="topbar" className="topbar">
+        <Container id="topbar__container">
           <a href="/" className="topbar__logo">
             <LogoSvg alt="Logo Instagram" />
           </a>
