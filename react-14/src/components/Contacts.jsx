@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./Container";
 import Contact from "./Contact";
 import "./Contacts.scss";
+import ErrorBoundary from "./ErrorBoundary";
 
 class Contacts extends React.Component {
   render() {
@@ -21,9 +22,13 @@ class Contacts extends React.Component {
     return (
       <Container id="contacts">
         <section className="contacts">
-          {contacts.map((contact) => (
-            <Contact key={contact.id} contact={contact} />
-          ))}
+          {contacts.map((contact) => {
+            return (
+              <ErrorBoundary key={contact.id}>
+                <Contact contact={contact} />
+              </ErrorBoundary>
+            );
+          })}
         </section>
       </Container>
     );

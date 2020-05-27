@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "Daniela Terry",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/shadeed9/128.jpg",
+    "company": "Rohan - Pagac",
+    "department": "Clothing",
+    "admissionDate": "2019-04-08T19:28:41.878Z",
+    "phone": "1-931-065-2122 x879",
+    "country": "Iceland"
+  },
+  {
+    "id": "2",
+    "name": "Gracie O'Kon",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ma_tiax/128.jpg",
+    "company": "Feil, Zemlak and Schaden",
+    "department": "Movies",
+    "admissionDate": "2019-04-17T10:40:09.218Z",
+    "phone": {
+      "cell": "914.770.6068 x794"
+    },
+    "country": "Holy See (Vatican City State)"
+  },
+  {
+    "id": "3",
+    "name": "Maudie Bernier",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/tom_even/128.jpg",
+    "company": "Osinski - Hintz",
+    "department": "Automotive",
+    "admissionDate": "2019-10-29T07:50:37.040Z",
+    "phone": "280-931-8732 x277",
+    "country": "Mauritania"
+  }
+]
