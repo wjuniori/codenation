@@ -16,7 +16,7 @@ class Contacts extends React.Component {
       company: "Empresa",
       department: "Departamento",
     };
-    const { contacts } = this.props;
+    const contacts = [...this.props.contacts];
     contacts.splice(0, 0, mockUserData);
 
     return (

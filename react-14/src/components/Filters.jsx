@@ -3,6 +3,38 @@ import Container from "./Container";
 import "./Filters.scss";
 
 class Filters extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      search: "",
+    };
+  }
+
+  handleChangeSearch = (event) => {
+    this.setState({
+      search: event.target.value,
+    });
+  };
+
+  handleClickSearch = (event) => {
+    event.preventDefault();
+
+    let contactsFiltered;
+
+    if (this.state.search) {
+      contactsFiltered = this.props.contacts.filter((contact) => {
+        return contact.name
+          .toLocaleLowerCase()
+          .includes(this.state.search.toLocaleLowerCase());
+      });
+    } else {
+      contactsFiltered = this.props.contacts;
+    }
+
+    this.props.updateStateFilter(contactsFiltered);
+  };
+
   render() {
     return (
       <Container id="filters">
@@ -12,9 +44,14 @@ class Filters extends React.Component {
               type="text"
               className="filters__search__input"
               placeholder="Pesquisar"
+              value={this.state.search}
+              onChange={this.handleChangeSearch}
             />
 
-            <button className="filters__search__icon">
+            <button
+              className="filters__search__icon"
+              onClick={this.handleClickSearch}
+            >
               <i className="fa fa-search" />
             </button>
           </div>

@@ -15,6 +15,8 @@ class App extends React.Component {
       contacts: [],
       isLoading: false,
     };
+
+    this.contactsAll = [];
   }
 
   async componentDidMount() {
@@ -23,10 +25,10 @@ class App extends React.Component {
     });
 
     const resp = await fetch(URL);
-    const data = await resp.json();
+    this.contactsAll = await resp.json();
 
     this.setState({
-      contacts: data,
+      contacts: this.contactsAll,
       isLoading: false,
     });
 
@@ -39,12 +41,21 @@ class App extends React.Component {
     // }, 2000);
   }
 
+  updateStateFilter = (contacts) => {
+    this.setState({
+      contacts,
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
         <Topbar />
 
-        <Filters />
+        <Filters
+          contacts={this.contactsAll}
+          updateStateFilter={this.updateStateFilter}
+        />
 
         {this.state.isLoading ? (
           <Loading />
