@@ -6,14 +6,16 @@ class Contact extends React.Component {
     return (
       <article data-testid="contact" className="contact">
         <span className="contact__avatar">
-          <img src={this.props.data.avatar} alt={this.props.data.name} />
+          <img src={this.props.contact.avatar} alt={this.props.contact.name} />
         </span>
-        <span className="contact__data">{this.props.data.name}</span>
-        <span className="contact__data">{this.props.data.phone}</span>
-        <span className="contact__data">{this.props.data.country}</span>
-        <span className="contact__data">{this.props.data.admissionDate}</span>
-        <span className="contact__data">{this.props.data.company}</span>
-        <span className="contact__data">{this.props.data.department}</span>
+        <span className="contact__data">{this.props.contact.name}</span>
+        <span className="contact__data">{this.props.contact.phone}</span>
+        <span className="contact__data">{this.props.contact.country}</span>
+        <span className="contact__data">
+          {this.props.contact.admissionDate}
+        </span>
+        <span className="contact__data">{this.props.contact.company}</span>
+        <span className="contact__data">{this.props.contact.department}</span>
       </article>
     );
   }
