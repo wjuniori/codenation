@@ -5,6 +5,7 @@ import Contacts from "./components/Contacts";
 import "./App.scss";
 import { URL } from "./constants";
 import Loading from "./components/Loading";
+import { sortByProperty } from "./utils";
 // import wrongData from "./data/wrongData.json";
 
 class App extends React.Component {
@@ -28,7 +29,9 @@ class App extends React.Component {
     this.contactsAll = await resp.json();
 
     this.setState({
-      contacts: this.contactsAll,
+      contacts: this.contactsAll.sort((objA, objB) =>
+        sortByProperty(objA, objB, "name")
+      ),
       isLoading: false,
     });
 
@@ -53,7 +56,8 @@ class App extends React.Component {
         <Topbar />
 
         <Filters
-          contacts={this.contactsAll}
+          contactsAll={this.contactsAll}
+          contacts={this.state.contacts}
           updateStateFilter={this.updateStateFilter}
         />
 

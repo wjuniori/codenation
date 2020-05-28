@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import "./Filters.scss";
+import { sortByProperty } from "../utils";
 
 class Filters extends React.Component {
   constructor(props) {
@@ -23,16 +24,32 @@ class Filters extends React.Component {
     let contactsFiltered;
 
     if (this.state.search) {
-      contactsFiltered = this.props.contacts.filter((contact) => {
+      contactsFiltered = this.props.contactsAll.filter((contact) => {
         return contact.name
           .toLocaleLowerCase()
           .includes(this.state.search.toLocaleLowerCase());
       });
     } else {
-      contactsFiltered = this.props.contacts;
+      contactsFiltered = this.props.contactsAll;
     }
 
-    this.props.updateStateFilter(contactsFiltered);
+    this.props.updateStateFilter(
+      contactsFiltered.sort((objA, objB) =>
+        sortByProperty(objA, objB, document.querySelector(".is-selected").name)
+      )
+    );
+  };
+
+  handleClickSort = (event) => {
+    event.preventDefault();
+    document.querySelector(".is-selected").classList.remove("is-selected");
+    event.target.classList.add("is-selected");
+
+    this.props.updateStateFilter(
+      this.props.contacts.sort((objA, objB) =>
+        sortByProperty(objA, objB, event.target.name)
+      )
+    );
   };
 
   render() {
@@ -56,23 +73,43 @@ class Filters extends React.Component {
             </button>
           </div>
 
-          <button className="filters__item is-selected">
+          <button
+            className="filters__item is-selected"
+            name="name"
+            onClick={this.handleClickSort}
+          >
             Nome <i className="fas fa-sort-down" />
           </button>
 
-          <button className="filters__item">
+          <button
+            className="filters__item"
+            name="country"
+            onClick={this.handleClickSort}
+          >
             País <i className="fas fa-sort-down" />
           </button>
 
-          <button className="filters__item">
+          <button
+            className="filters__item"
+            name="company"
+            onClick={this.handleClickSort}
+          >
             Empresa <i className="fas fa-sort-down" />
           </button>
 
-          <button className="filters__item">
+          <button
+            className="filters__item"
+            name="department"
+            onClick={this.handleClickSort}
+          >
             Departamento <i className="fas fa-sort-down" />
           </button>
 
-          <button className="filters__item">
+          <button
+            className="filters__item"
+            name="admissionDate"
+            onClick={this.handleClickSort}
+          >
             Data de admissão <i className="fas fa-sort-down" />
           </button>
         </section>
