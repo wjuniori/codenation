@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contact.scss";
+import { formatDate } from "../utils";
 
 class Contact extends React.Component {
   render() {
@@ -12,7 +13,9 @@ class Contact extends React.Component {
         <span className="contact__data">{this.props.contact.phone}</span>
         <span className="contact__data">{this.props.contact.country}</span>
         <span className="contact__data">
-          {this.props.contact.admissionDate}
+          {this.props.contact.id === "-1"
+            ? this.props.contact.admissionDate
+            : formatDate(this.props.contact.admissionDate)}
         </span>
         <span className="contact__data">{this.props.contact.company}</span>
         <span className="contact__data">{this.props.contact.department}</span>
