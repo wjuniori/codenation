@@ -7,18 +7,28 @@ class Contact extends React.Component {
     return (
       <article data-testid="contact" className="contact">
         <span className="contact__avatar">
-          <img src={this.props.contact.avatar} alt={this.props.contact.name} />
+          <img src={this.props.data.avatar} alt={this.props.data.name} />
         </span>
-        <span className="contact__data">{this.props.contact.name}</span>
-        <span className="contact__data">{this.props.contact.phone}</span>
-        <span className="contact__data">{this.props.contact.country}</span>
-        <span className="contact__data">
-          {this.props.contact.id === "-1"
-            ? this.props.contact.admissionDate
-            : formatDate(this.props.contact.admissionDate)}
+        <span data-testid="contact-name" className="contact__data">
+          {this.props.data.name}
         </span>
-        <span className="contact__data">{this.props.contact.company}</span>
-        <span className="contact__data">{this.props.contact.department}</span>
+        <span data-testid="contact-phone" className="contact__data">
+          {this.props.data.phone}
+        </span>
+        <span data-testid="contact-country" className="contact__data">
+          {this.props.data.country}
+        </span>
+        <span data-testid="contact-date" className="contact__data">
+          {this.props.data.id === "-1"
+            ? this.props.data.admissionDate
+            : formatDate(this.props.data.admissionDate)}
+        </span>
+        <span data-testid="contact-company" className="contact__data">
+          {this.props.data.company}
+        </span>
+        <span data-testid="contact-department" className="contact__data">
+          {this.props.data.department}
+        </span>
       </article>
     );
   }

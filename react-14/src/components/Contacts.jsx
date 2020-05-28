@@ -16,7 +16,7 @@ class Contacts extends React.Component {
       company: "Empresa",
       department: "Departamento",
     };
-    const contacts = [...this.props.contacts];
+    const contacts = this.props.contacts ? [...this.props.contacts] : [];
     contacts.splice(0, 0, mockUserData);
 
     return (
@@ -25,7 +25,7 @@ class Contacts extends React.Component {
           {contacts.map((contact) => {
             return (
               <ErrorBoundary key={contact.id}>
-                <Contact contact={contact} />
+                <Contact data={contact} />
               </ErrorBoundary>
             );
           })}

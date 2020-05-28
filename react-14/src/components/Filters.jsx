@@ -21,17 +21,13 @@ class Filters extends React.Component {
   handleClickSearch = (event) => {
     event.preventDefault();
 
-    let contactsFiltered;
-
-    if (this.state.search) {
-      contactsFiltered = this.props.contactsAll.filter((contact) => {
-        return contact.name
-          .toLocaleLowerCase()
-          .includes(this.state.search.toLocaleLowerCase());
-      });
-    } else {
-      contactsFiltered = this.props.contactsAll;
-    }
+    const contactsFiltered = this.state.search
+      ? this.props.contactsAll.filter((contact) => {
+          return contact.name
+            .toLocaleLowerCase()
+            .includes(this.state.search.toLocaleLowerCase());
+        })
+      : this.props.contactsAll;
 
     this.props.updateStateFilter(
       contactsFiltered.sort((objA, objB) =>
@@ -43,11 +39,16 @@ class Filters extends React.Component {
   handleClickSort = (event) => {
     event.preventDefault();
     document.querySelector(".is-selected").classList.remove("is-selected");
-    event.target.classList.add("is-selected");
+
+    const element =
+      event.target.nodeName.toLowerCase() === "i"
+        ? event.target.parentElement
+        : event.target;
+    element.classList.add("is-selected");
 
     this.props.updateStateFilter(
       this.props.contacts.sort((objA, objB) =>
-        sortByProperty(objA, objB, event.target.name)
+        sortByProperty(objA, objB, element.name)
       )
     );
   };
