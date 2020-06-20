@@ -44,7 +44,7 @@ class App extends React.Component {
     // }, 2000);
   }
 
-  updateStateFilter = (contacts) => {
+  handleClick = (contacts) => {
     this.setState({
       contacts,
     });
@@ -58,7 +58,7 @@ class App extends React.Component {
         <Filters
           contactsAll={this.contactsAll}
           contacts={this.state.contacts}
-          updateStateFilter={this.updateStateFilter}
+          onClick={this.handleClick}
         />
 
         {this.state.isLoading ? (

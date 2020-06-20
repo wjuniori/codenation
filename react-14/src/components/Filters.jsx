@@ -29,7 +29,7 @@ class Filters extends React.Component {
         })
       : this.props.contactsAll;
 
-    this.props.updateStateFilter(
+    this.props.onClick(
       contactsFiltered.sort((objA, objB) =>
         sortByProperty(objA, objB, document.querySelector(".is-selected").name)
       )
@@ -46,7 +46,7 @@ class Filters extends React.Component {
         : event.target;
     element.classList.add("is-selected");
 
-    this.props.updateStateFilter(
+    this.props.onClick(
       this.props.contacts.sort((objA, objB) =>
         sortByProperty(objA, objB, element.name)
       )
